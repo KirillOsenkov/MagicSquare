@@ -38,7 +38,8 @@ namespace MagicSquare
         int width = 5;
         int height = 5;
         int F(int i, int j) => i + j;
-        string operation = "+";
+        string Operation(int i, int j) => $"{j} + {i} = {F(i, j)}";
+        static int cellFontSize = 24;
 
         Brush emptyBrush = Brushes.AliceBlue;
         Brush emptyRowBrush = Brushes.MintCream;
@@ -179,7 +180,7 @@ namespace MagicSquare
                 }
             }
 
-            answerText.Text = $"{selectedRow} {operation} {selectedColumn} = {F(selectedRow, selectedColumn)}";
+            answerText.Text = Operation(selectedColumn, selectedRow);
         }
 
         private static Border GetCell(string text)
@@ -192,7 +193,7 @@ namespace MagicSquare
             {
                 Text = text,
                 Foreground = Brushes.DarkGray,
-                FontSize = 24,
+                FontSize = cellFontSize,
                 HorizontalAlignment = HorizontalAlignment.Center,
                 VerticalAlignment = VerticalAlignment.Center
             };
