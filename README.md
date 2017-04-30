@@ -1,2 +1,4 @@
 # MagicSquare
-Simple addition/multiplication table for kids
+Simple addition/multiplication table for kids.
+
+![Screenshot](Screenshot.png)
