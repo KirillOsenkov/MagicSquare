@@ -35,8 +35,9 @@ namespace MagicSquare
         int selectedColumn = 1;
         int selectedRow = 1;
 
-        int width = 5;
-        int height = 5;
+        int width = 10;
+        int height = 10;
+        double margin = 4;
         int F(int i, int j) => i + j;
         string Operation(int i, int j) => $"{j} + {i} = {F(i, j)}";
         static int cellFontSize = 24;
@@ -183,11 +184,11 @@ namespace MagicSquare
             answerText.Text = Operation(selectedColumn, selectedRow);
         }
 
-        private static Border GetCell(string text)
+        private Border GetCell(string text)
         {
             var border = new Border()
             {
-                Margin = new Thickness(4),
+                Margin = new Thickness(margin),
             };
             var textBlock = new TextBlock
             {
