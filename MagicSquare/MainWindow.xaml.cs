@@ -37,10 +37,11 @@ namespace MagicSquare
 
         int width = 10;
         int height = 10;
-        double margin = 4;
-        int F(int i, int j) => i + j;
-        string Operation(int i, int j) => $"{j} + {i} = {F(i, j)}";
-        static int cellFontSize = 24;
+
+        double margin = 1;
+        int F(int i, int j) => i * j;
+        string Operation(int i, int j) => $"{j} * {i} = {F(i, j)}";
+        static int cellFontSize = 22;
 
         Brush emptyBrush = Brushes.AliceBlue;
         Brush emptyRowBrush = Brushes.MintCream;
